@@ -1,4 +1,7 @@
-var app = angular.module('SwAppi', ['ngMaterial']);
+var app = angular.module('SwAppi', [
+  'ngMaterial',
+  'ngRoute'
+ ]);
 
 app.controller('homeCtrl', ['$scope', function($scope) {
   $scope.saludo = 'Hola!';
@@ -15,7 +18,6 @@ app.controller('vechicleCtrl', ['$scope','$http', function($scope, $http) {
     }).then(function successCallback(result) {
         console.log(result);
         $scope.vehicles = result.data.results;
-        $scope.vehicleImages = vehicleImages;
         console.log($scope.vehicles);
     }, function errorCallback(result) {
       // called asynchronously if an error occurs
