@@ -1,0 +1,22 @@
+{
+  "name": "swapi-project",
+  "version": "1.0.0",
+  "description": "Get data from API in angularjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngie-mp/swapi-project.git"
+  },
+  "author": "ngie-mp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ngie-mp/swapi-project/issues"
+  },
+  "homepage": "https://github.com/ngie-mp/swapi-project#readme",
+  "dependencies": {
+    "angularjs": "0.0.1"
+  }
+}
