@@ -4,19 +4,22 @@ app.controller('homeCtrl', ['$scope', function($scope) {
   $scope.saludo = 'Hola!';
 }]);
 
-app.controller('moviesCtrl', ['$scope','$http', function($scope, $http) {
-  $scope.movies = [];
-  $scope.getMovies = function() {
+app.controller('vechicleCtrl', ['$scope','$http', function($scope, $http) {
+
+  $scope.vehicles = [];
+
+  $scope.getVehicles = function() {
     $http({
     method: 'GET',
     url: 'http://swapi.co/api/vehicles/'
     }).then(function successCallback(result) {
         console.log(result);
-        $scope.movies = result.data.results;
-        console.log($scope.movies);
+        $scope.vehicles = result.data.results;
+        $scope.vehicleImages = vehicleImages;
+        console.log($scope.vehicles);
     }, function errorCallback(result) {
       // called asynchronously if an error occurs
-      console.log('no movies' + result);
+      console.log('no starships' + result);
     });
   }
 }]);
