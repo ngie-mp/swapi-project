@@ -1,0 +1,28 @@
+<h2 title="{{titlePage}}">{{titlePage}}</h2>
+<md-content flex layout="row">
+ <div ng-init="getVehicles()">
+  <div class="">
+    <md-progress-circular md-mode="indeterminate" ng-if=isVisible></md-progress-circular>
+  </div>
+   <div ng-repeat="vehicle in vehicles">
+     <div flex="33">
+       <md-card>
+         <img ng-src="" class="md-card-image" alt="image caption">
+         <md-card-title>
+           <md-card-title-text>
+             <span class="md-headline">{{vehicle.name}}</span>
+             <span class="md-subhead">{{vehicle.created | date}}</span>
+           </md-card-title-text>
+         </md-card-title>
+         <md-card-content>
+           <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Voluptates minus sed, sint officia quae laboriosam, modi autem quod.
+            Consequatur quaeratasperiores facilis sunt excepturi!
+           </p>
+         </md-card-content>
+       </md-card>
+     </div>
+   </div>
+ </div>
+</md-content>
